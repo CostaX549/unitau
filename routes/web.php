@@ -28,7 +28,16 @@ Route::view('profile', 'profile')
     Volt::route('home', 'unitau.home')
     ->middleware(['auth'])
     ->name('home');
-    
-    Volt::route('chat','unitau.chat')->name('chat');
+
+
+
+    Volt::route('chat','unitau.chat')->middleware(['auth'])->name('chat');
+
+    Volt::route('equipe/{id}','unitau.equipe')->middleware(['auth', 'checkTeamMembership'])->name('equipe');
+     Volt::route('equipe/{id}/tarefas','unitau.tarefas')->middleware(['auth','checkTeamMembership'])->name('equipe.tarefas');
+     Volt::route('equipe/{id}/tarefas/{id1}','unitau.tarefa')->middleware(['auth','checkTeamMembership'])->name('equipe.tarefa'); 
+
+
+
 
 require __DIR__.'/auth.php';

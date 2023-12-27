@@ -17,10 +17,10 @@ new class extends Component {
 
 
     
-    <aside class="flex flex-col items-center w-20 h-screen py-8 overflow-y-auto bg-blue-800 border-r rtl:border-l rtl:border-r-0">
+    <aside class="flex flex-col fixed items-center w-[80px]  h-screen py-8 overflow-y-auto bg-blue-800 border-r rtl:border-l rtl:border-r-0">
         <nav class="flex flex-col flex-1 space-y-6">
             <a href="/home" wire:navigate>
-            
+          
             </a>
     
             <x-unitau-link :href="route('home')" :active="request()->routeIs('home')" wire:navigate>

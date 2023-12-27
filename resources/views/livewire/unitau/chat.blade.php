@@ -1,9 +1,11 @@
 <?php
 
 use Livewire\Volt\Component;
-use Livewire\Attributes\Layout;
+use Livewire\Attributes\{Title, On, Layout};
 
-new #[Layout('layouts.app')]  class extends Component {
+new  
+#[Layout('components.layouts.teams')] 
+class extends Component {
     //
 }; ?>
 
